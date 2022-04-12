@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<p> Size-modes for application </p>
+<p> This demo shows the Size-Modes applied for Syncfusion Control </p>
+
+<button id="touch">Touch Mode</button>
+<button id="mouse">Mouse Mode</button>
+
+<div class="control">
+    @Html.EJS().Calendar("calendar").Render()
+</div>
+
+<div class="control">
+    @Html.EJS().Button("element").Content("Button").Render()
+</div>
+
+<div class="control">
+    @Html.EJS().CheckBox("default").Label("Checked").Checked(true).Render()
+</div>
+
+<style>
+    .e-bigger {
+        font-size: x-large;
+    }
+</style>
+
+<script>
+    document.getElementById("touch").addEventListener("click", function () {
+        var controls = document.querySelectorAll('.control');
+        for (var index = 0; index < controls.length; index++) {
+            controls[index].classList.add('e-bigger');
+        }
+    });
+
+    document.getElementById("mouse").addEventListener("click", function () {
+        var controls = document.querySelectorAll('.control');
+        for (var index = 0; index < controls.length; index++) {
+            controls[index].classList.remove('e-bigger');
+        }
+    });
+</script>
