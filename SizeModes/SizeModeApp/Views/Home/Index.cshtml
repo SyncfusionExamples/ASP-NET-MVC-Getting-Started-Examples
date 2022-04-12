@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<p> Size-modes for application </p>
+<p> This demo shows the Size-Modes applied for an entire application </p>
+
+<button id="touch">Touch Mode</button>
+<button id="mouse">Mouse Mode</button>
+
+<div>
+    @Html.EJS().Calendar("calendar").Render()
+</div>
+
+<div>
+    @Html.EJS().Button("element").Content("Button").Render()
+</div>
+
+<div>
+    @Html.EJS().CheckBox("default").Label("Checked").Checked(true).Render()
+</div>
+
+<script>
+    document.getElementById("touch").addEventListener("click", function () {
+        document.body.classList.add('e-bigger');
+    });
+    document.getElementById("mouse").addEventListener("click", function () {
+        document.body.classList.remove('e-bigger');
+    });
+</script>
