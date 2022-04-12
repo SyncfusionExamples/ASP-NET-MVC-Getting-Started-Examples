@@ -1,0 +1,20 @@
+﻿@model List<AccumulationChartSample.Controllers.PieChartData>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @(Html.EJS().AccumulationChart("container").Title("Mobile Browser Statistics")
+    .LegendSettings(ls => ls.Visible(false)).EnableSmartLabels(true).
+    Series(series =>
+    {
+    series.DataLabel(dl => dl.Visible(true).Name("text"))
+    .XName("xValue")
+    .YName("yValue")
+    .Name("Browser")
+    .Type(Syncfusion.EJ2.Charts.AccumulationType.Pie)
+    .DataSource(Model).Add();
+    }).Render())
+
+</div>
