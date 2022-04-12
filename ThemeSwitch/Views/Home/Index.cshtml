@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using Syncfusion.EJ2.DropDowns;
+@using ThemeSwitch.Models;
+
+<div class="dropdown">
+    @Html.EJS().DropDownList("theme").Placeholder("Select a theme").PopupHeight("220px").Index(2).Width("20%").DataSource(
+    (IEnumerable<ThemeDetail>)ViewBag.data).Change("onThemeChange").Fields(new DropDownListFieldSettings { Text = "Text", Value = "ID" }).Render()
+</div>
+
+<script type="text/javascript">
+    function onThemeChange(e) {
+        document.getElementsByTagName('body')[0].style.display = 'none';
+        var themeName = e.value;
+        let synclink = document.getElementById('cssfile');
+        synclink.href = 'https://cdn.syncfusion.com/ej2/20.1.47/' + themeName + '.css';
+        setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 500);
+    }
+</script>
+
+<div>
+    @Html.EJS().Grid("RemoteData").DataSource(dataManger =>
+    {
+        dataManger.Url("https://ej2services.syncfusion.com/production/web-services/api/Orders").CrossDomain(true).Adaptor("ODataV4Adaptor");
+
+    }).Columns(col =>
+        {
+            col.Field("OrderID").HeaderText("Order ID").Width("120").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Right).Add();
+        col.Field("CustomerID").HeaderText("Customer ID").Width("160").Add();
+        col.Field("EmployeeID").HeaderText("Employee ID").Width("120").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Right).Add();
+        col.Field("Freight").HeaderText("Freight").Width("150").Format("C2").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Right).Add();
+        col.Field("ShipCountry").HeaderText("Ship Country").Width("150").Add();
+
+    }).AllowPaging().Render()
+</div>
+
+<style>
+    .dropdown {
+        padding: 20px 0px;
+    }
+</style>
