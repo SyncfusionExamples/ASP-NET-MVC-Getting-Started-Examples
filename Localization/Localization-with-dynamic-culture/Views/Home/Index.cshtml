@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="dropdown">
+    @Html.EJS().DropDownList("culture-swtich").DataSource((IEnumerable<Object>)ViewBag.data).Change("onCultureChange").Width("20%").Index(0).Fields(new Syncfusion.EJ2.DropDowns.DropDownListFieldSettings { Text = "Text", Value = "ID" }).Render()
+</div>
+
+<script>
+    function onCultureChange(e) {
+        var culture = e.value;
+        var ajax = new ej.base.Ajax(location.origin + '/Content/locale/' + culture + '.json', 'GET', false);   //load the json culture file
+        ajax.send().then((e) => {
+            var loader = JSON.parse(e);
+            ej.base.L10n.load(
+                loader
+            );
+            ej.base.setCulture(culture);      //Set the culture for the ASP.NET Core controls
+        });
+    }
+</script>
+
+<style>
+    .dropdown {
+        padding: 20px 0px;
+    }
+</style>
+
+
+@Html.EJS().Grid("RemoteData").DataSource(dataManger =>
+{
+    dataManger.Url("https://ej2services.syncfusion.com/production/web-services/api/Orders").CrossDomain(true).Adaptor("ODataV4Adaptor");
+
+}).Columns(col =>
+{
+    col.Field("OrderID").HeaderText("Order ID").Width("120").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Right).Add();
+    col.Field("CustomerID").HeaderText("Customer ID").Width("160").Add();
+    col.Field("EmployeeID").HeaderText("Employee ID").Width("120").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Right).Add();
+    col.Field("Freight").HeaderText("Freight").Width("150").Format("C2").TextAlign(Syncfusion.EJ2.Grids.TextAlign.Right).Add();
+    col.Field("ShipCountry").HeaderText("Ship Country").Width("150").Add();
+
+}).AllowPaging().AllowGrouping().Render()
+
