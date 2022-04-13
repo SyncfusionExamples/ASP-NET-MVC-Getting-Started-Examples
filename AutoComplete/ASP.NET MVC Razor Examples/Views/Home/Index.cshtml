@@ -1,0 +1,8 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @Html.EJS().AutoComplete("games").Placeholder("Select a game").PopupWidth("300px").PopupHeight("200px").DataSource((IEnumerable<object>)Model).Render()
+</div>
