@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization-with-dynamic-culture", "Localization-with-dynamic-culture.csproj", "{F99677C2-2679-4F39-A552-C3BC766BBB7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F99677C2-2679-4F39-A552-C3BC766BBB7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99677C2-2679-4F39-A552-C3BC766BBB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99677C2-2679-4F39-A552-C3BC766BBB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99677C2-2679-4F39-A552-C3BC766BBB7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B3D14BD-4046-4858-BF39-F70DF90FC94C}
+	EndGlobalSection
+EndGlobal
