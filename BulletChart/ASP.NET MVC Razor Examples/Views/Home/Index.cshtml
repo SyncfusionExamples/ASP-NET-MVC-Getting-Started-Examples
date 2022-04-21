@@ -1,0 +1,21 @@
+﻿@model List<BulletChartSample.Controllers.BulletChartData>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @(Html.EJS().BulletChart("container")
+    .Title("Revenue")
+    .Tooltip(tp => tp.Enable(true))
+    .ValueField("value")
+    .TargetField("target")
+    .Ranges(rn =>
+    {
+    rn.End(150).Add();
+    rn.End(250).Add();
+    rn.End(300).Add();
+    })
+    .Minimum(0).Maximum(300).Interval(50)
+    .DataSource(Model)
+    .Render())
+</div>
