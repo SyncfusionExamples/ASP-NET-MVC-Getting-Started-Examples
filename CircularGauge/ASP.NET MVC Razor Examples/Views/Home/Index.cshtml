@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @Html.EJS().CircularGauge("container").Title("Speed").Axes(axes => axes.EndAngle(120).StartAngle(240).Radius("90%").Minimum(0).Maximum(120).Add()).Render();
+</div>
