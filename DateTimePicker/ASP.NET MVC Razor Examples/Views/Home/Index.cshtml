@@ -1,0 +1,9 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var minDate = new DateTime(2022, 11, 22, 12, 00, 00);
+    var maxDate = new DateTime(2022, 11, 25, 05, 00, 00);
+}
+
+<div>
+    @Html.EJS().DateTimePicker("datetimepicker").Max(maxDate).Min(minDate).Render()
+</div>

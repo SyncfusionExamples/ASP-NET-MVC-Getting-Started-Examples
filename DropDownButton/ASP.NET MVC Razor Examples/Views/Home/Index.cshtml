@@ -1,0 +1,8 @@
+﻿@model List<object>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @Html.EJS().DropDownButton("element").Content("Edit").Items((IEnumerable<object>)Model).Render()
+</div>
