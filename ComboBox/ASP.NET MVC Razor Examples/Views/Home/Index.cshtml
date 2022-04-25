@@ -1,0 +1,9 @@
+﻿@using Syncfusion.EJ2
+@model List<string>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @Html.EJS().ComboBox("games").AllowCustom(true).Placeholder("Select a game").PopupWidth("300px").PopupHeight("230px").DataSource((IEnumerable<object>)Model).Render()
+</div>
