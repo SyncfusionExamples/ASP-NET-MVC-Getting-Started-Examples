@@ -1,0 +1,11 @@
+﻿@model List<GanttSample.Controllers.GanttDataSource>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @Html.EJS().Gantt("Gantt").DataSource((IEnumerable<object>)Model).AllowFiltering(true).AllowSorting(true).Height("450px").TaskFields(ts => ts.Id("TaskId"
+        ).Name("TaskName").StartDate("StartDate").EndDate("EndDate").Duration("Duration").Progress("Progress").Dependency("Predecessor").Child("SubTasks").ResourceInfo(
+            "ResourceId")).LabelSettings(ls => ls.RightLabel("${if(ResourceId)} ${ResourceId} ${/if}")
+            ).ResourceFields(rf => rf.Id("ResourceId").Name("ResourceName")).Resources((IEnumerable<object>)ViewBag.projectResources).Render()
+</div>
