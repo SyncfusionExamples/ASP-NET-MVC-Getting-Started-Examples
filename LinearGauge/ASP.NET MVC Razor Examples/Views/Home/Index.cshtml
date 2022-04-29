@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @Html.EJS().LinearGauge("container").Axes(new List<Syncfusion.EJ2.LinearGauge.LinearGaugeAxis> {
+   new Syncfusion.EJ2.LinearGauge.LinearGaugeAxis
+   {
+       Minimum = 0, Maximum = 200
+   }}).Render();
+</div>
