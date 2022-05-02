@@ -1,0 +1,8 @@
+﻿@model List<object>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @Html.EJS().ListView("listview").DataSource((IEnumerable<object>)Model).Render()
+</div>
