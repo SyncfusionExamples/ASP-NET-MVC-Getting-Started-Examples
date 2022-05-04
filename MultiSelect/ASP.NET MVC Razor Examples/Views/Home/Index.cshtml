@@ -1,0 +1,8 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @Html.EJS().MultiSelect("default").Placeholder("Select games").DataSource((IEnumerable<object>)Model).PopupHeight("220px").PopupWidth("300px").Render()
+</div>

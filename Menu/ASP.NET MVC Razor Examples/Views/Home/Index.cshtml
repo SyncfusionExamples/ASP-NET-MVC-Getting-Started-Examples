@@ -1,0 +1,8 @@
+﻿@model List<object>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @Html.EJS().Menu("menu").Items(Model).Render()
+</div>
