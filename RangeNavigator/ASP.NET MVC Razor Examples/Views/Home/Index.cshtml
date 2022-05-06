@@ -1,0 +1,15 @@
+﻿@model List<RangeNavigatorSample.Controllers.data>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @(Html.EJS().RangeNavigator("container")
+                    .ValueType(Syncfusion.EJ2.Charts.RangeValueType.DateTime)
+                    .LabelFormat("MMM-yy")
+                .Series(sr =>
+                {
+                    sr.XName("x").YName("y").DataSource(Model).Add();
+                }).Render()
+                )
+</div>

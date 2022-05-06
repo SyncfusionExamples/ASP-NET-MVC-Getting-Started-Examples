@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @(Html.EJS().ProgressBar("container")
+    .Type(Syncfusion.EJ2.ProgressBar.ProgressType.Linear).Value(40)
+    .Height("60")
+    .Minimum(0).Maximum(100)
+    .Render())
+</div>
