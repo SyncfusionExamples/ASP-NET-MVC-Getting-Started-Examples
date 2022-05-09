@@ -1,0 +1,14 @@
+﻿@using Syncfusion.EJ2.Schedule
+@model List<ScheduleSample.Controllers.AppointmentData>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @(Html.EJS().Schedule("schedule")
+    .Height("550px")
+    .EventSettings(new ScheduleEventSettings { DataSource = Model })
+    .SelectedDate(new DateTime(2022, 2, 15))
+    .Render()
+)
+</div>
