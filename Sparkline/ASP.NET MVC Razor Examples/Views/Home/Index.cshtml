@@ -1,0 +1,9 @@
+﻿@model List<SparklineSample.Controllers.DataSource>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <h2> Essential JS 2 for ASP.NET MVC Sparkline </h2>
+    @Html.EJS().Sparkline("spark").DataSource(Model).XName("xval").YName("yval").Height("100").Width("150").Render()
+</div>
