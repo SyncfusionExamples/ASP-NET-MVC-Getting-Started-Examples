@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBoxSample", "TextBoxSample.csproj", "{6AA6D5F1-349D-4FB0-8F41-D91D79C37278}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AA6D5F1-349D-4FB0-8F41-D91D79C37278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA6D5F1-349D-4FB0-8F41-D91D79C37278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA6D5F1-349D-4FB0-8F41-D91D79C37278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA6D5F1-349D-4FB0-8F41-D91D79C37278}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {826A831D-FC54-42CF-BC2E-E0B183E369AC}
+	EndGlobalSection
+EndGlobal
