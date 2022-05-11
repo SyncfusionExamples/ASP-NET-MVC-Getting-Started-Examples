@@ -1,0 +1,7 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @Html.EJS().TimePicker("timepicker").Value(DateTime.Now).Format("HH:mm").Step(60).Render()
+</div>
