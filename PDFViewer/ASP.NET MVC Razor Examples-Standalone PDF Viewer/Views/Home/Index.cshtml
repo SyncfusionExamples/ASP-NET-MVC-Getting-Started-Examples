@@ -1,60 +1,8 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Home Page";
 }
 
-<button type="button" onclick="previouspage()">Previous Page</button>
-<button type="button" onclick="nextpage()">Next Page</button>
-<button type="button" onclick="addAnnotation()">Add annotation</button>
-<button type="button" onclick="addFormField()">Add FormField</button>
-<button type="button" onclick="addtags()">Add tags</button>
 <div style="width:100%;height:600px">
     <!--Code to render PDF Viewer-->
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
 </div>
-<style>
-    #pdfviewer {
-        display: block;
-    }
-</style>
-
-<script>
-    //Method to add free text annotation programmatically.
-    function  addAnnotation() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-    viewer.annotation.setAnnotationMode("FreeText");
-    }
-    //Method to add form field value programmatically.
-    function addFormField() {
-        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfviewer.formDesignerModule.addFormField('Textbox', {
-                name: 'Textbox',
-            bounds: {X: 146, Y: 229, Width: 150, Height: 24 },
-            });
-    }
-    //Method to add tag filed programmatically.
-    function addtags() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.annotation.setAnnotationMode("StickyNotes");
-    }
-    //Method to navigate to the previous page programmatically.
-    function previouspage() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.navigation.goToPreviousPage();
-    }
-    //Method to navigate to the next page programmatically.
-    function nextpage() {
-        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.navigation.goToNextPage();
-    }
-
-</script>
-
-
-
-
-
-
-
-
-
