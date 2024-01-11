@@ -45,15 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-	<Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Syncfusion.EJ2, Version=20.1500.0.51, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>packages\Syncfusion.EJ2.MVC5.20.1.0.51\lib\net45\Syncfusion.EJ2.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Licensing, Version=20.1460.0.51, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>packages\Syncfusion.Licensing.20.1.0.51\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    <Reference Include="Syncfusion.EJ2, Version=23.1.43.0, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.EJ2.MVC5.23.1.43\lib\net45\Syncfusion.EJ2.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=23.1460.43.0, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Licensing.23.1.43\lib\net46\Syncfusion.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -108,9 +111,6 @@
       <Private>True</Private>
       <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -132,10 +132,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ej2\bootstrap-dark.css" />
+    <Content Include="Content\ej2\bootstrap.css" />
+    <Content Include="Content\ej2\bootstrap4.css" />
+    <Content Include="Content\ej2\bootstrap5-dark.css" />
+    <Content Include="Content\ej2\bootstrap5.css" />
+    <Content Include="Content\ej2\fabric-dark.css" />
+    <Content Include="Content\ej2\fabric.css" />
+    <Content Include="Content\ej2\fluent-dark.css" />
+    <Content Include="Content\ej2\fluent.css" />
+    <Content Include="Content\ej2\highcontrast.css" />
+    <Content Include="Content\ej2\material-dark.css" />
+    <Content Include="Content\ej2\material.css" />
+    <Content Include="Content\ej2\material3-dark.css" />
+    <Content Include="Content\ej2\material3.css" />
+    <Content Include="Content\ej2\tailwind-dark.css" />
+    <Content Include="Content\ej2\tailwind.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="App_Data\WorldMap.json" />
+    <Content Include="Scripts\ej2\ej2-pdfviewer-lib\pdfium.js" />
+    <Content Include="Scripts\ej2\ej2.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -156,10 +174,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\ej2\compatibility\material.scss" />
+    <Content Include="Content\ej2\compatibility\highcontrast.scss" />
+    <Content Include="Content\ej2\compatibility\fabric.scss" />
+    <Content Include="Content\ej2\compatibility\bootstrap4.scss" />
+    <Content Include="Content\ej2\compatibility\bootstrap.scss" />
     <None Include="packages.config" />
+    <Content Include="Scripts\ej2\ej2-pdfviewer-lib\pdfium.wasm" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\ej2\ej2.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
