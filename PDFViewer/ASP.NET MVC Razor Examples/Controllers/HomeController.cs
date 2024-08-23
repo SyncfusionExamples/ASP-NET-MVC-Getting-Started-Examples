@@ -232,6 +232,8 @@ namespace PDFViewerSample.Controllers
     {
         public string document { get; set; }
         public string password { get; set; }
+        public bool isClientsideLoading { get; set; }
+        public string organizePages { get; set; }
         public string zoomFactor { get; set; }
         public string isFileName { get; set; }
         public string xCoordinate { get; set; }
@@ -264,7 +266,8 @@ namespace PDFViewerSample.Controllers
         public string freeTextAnnotation { get; set; }
         public string signatureData { get; set; }
         public string fieldsData { get; set; }
-        public string FormDesigner { get; set; }
+        public string formDesigner { get; set; }
+        public bool isSignatureEdited { get; set; }
         public string inkSignatureData { get; set; }
         public bool hideEmptyDigitalSignatureFields { get; set; }
         public bool showDigitalSignatureAppearance { get; set; }
@@ -275,9 +278,10 @@ namespace PDFViewerSample.Controllers
         public string annotationCollection { get; set; }
         public string annotationsPageList { get; set; }
         public string formFieldsPageList { get; set; }
-        public string isAnnotationsExist { get; set; }
-        public string isFormFieldAnnotationsExist { get; set; }
+        public bool isAnnotationsExist { get; set; }
+        public bool isFormFieldAnnotationsExist { get; set; }
         public string documentLiveCount { get; set; }
         public string annotationDataFormat { get; set; }
+
     }
 }
